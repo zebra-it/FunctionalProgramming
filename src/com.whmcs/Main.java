@@ -30,11 +30,10 @@ public class Main {
         }
 
         System.out.println("// Declarative approach");
-        people.stream().filter(person ->
+        List<Person> females2 = people.stream().filter(person ->
                 FEMALE.equals(person.gender))
-                .collect(Collectors.toList())
-                .forEach(System.out::println);
-
+                .collect(Collectors.toList());
+        females2.forEach(System.out::println);
 
     }
 
