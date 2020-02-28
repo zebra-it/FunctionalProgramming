@@ -1,4 +1,4 @@
-package com.whmcs;
+package com.whmcs.FunctionalInterfc;
 
 public interface Printable {
     static void printResultTable(String[] funcNames, String... results) {

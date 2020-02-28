@@ -1,24 +1,18 @@
-package com.whmcs;
+package com.whmcs.FunctionalInterfc;
 
-import javax.swing.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class _Function {
     public static void main(String[] args) {
         Integer increment = increment(0);
-
         Integer increment2 = incrementByOneFunction.apply(0);
-
         Integer multiply = multipleByTenFunction.apply(increment2);
-
         //Chaining function
         Function<Integer, Integer> addByOneAndThemMultiplyBy10
                 = incrementByOneFunction.andThen(multipleByTenFunction);
         Integer apply = addByOneAndThemMultiplyBy10.apply(1);
-
         Integer incrementByOneAndMultiply = incrementByOneAndMultiply(4, 100);
-
         Integer incrementBiFunction = incrementByOneAndMultiplyBiFunction.apply(4, 100);
 
         String[] funcNames = {
@@ -29,6 +23,7 @@ public class _Function {
                 "multipleByTenFunction",
                 "incrementByOneAndMultiplyBiFunction"
         };
+
         Printable.printResultTable(funcNames, increment.toString(), increment2.toString(), multiply.toString(),
                 apply.toString(), incrementByOneAndMultiply.toString(), incrementBiFunction.toString());
 
