@@ -21,45 +21,20 @@ public class _Function {
 
         Integer incrementBiFunction = incrementByOneAndMultiplyBiFunction.apply(4, 100);
 
-        String[] columnNames = {
-                "functionName",
-                "result"
-        };
-        String[] data = {
+        String[] funcNames = {
                 "not functional style",
                 "incrementByOneFunction",
                 "multipleByTenFunction",
                 "incrementByOneAndMultiply",
                 "multipleByTenFunction",
                 "incrementByOneAndMultiplyBiFunction"
-
         };
-        String[] data1 = {
-                increment.toString(),
-                increment2.toString(),
-                multiply.toString(),
-                apply.toString(),
-                incrementByOneAndMultiply.toString(),
-                incrementBiFunction.toString()
+        Printable.printResultTable(funcNames, increment.toString(), increment2.toString(), multiply.toString(),
+                apply.toString(), incrementByOneAndMultiply.toString(), incrementBiFunction.toString());
 
-        };
-
-        String leftAlignFormat = "| %-40s | %-3s |%n";
-
-        System.out.format("+------------------------------------------+-----+%n");
-        System.out.format("| functionName                             | res |%n");
-        System.out.format("+------------------------------------------+-----+%n");
-        for (int i = 0; i < data.length; i++) {
-            System.out.format(leftAlignFormat, data[i], data1[i]);
-        }
-        System.out.format("+------------------------------------------+-----+%n");
     }
-    static void printResultTable(Integer ... results) {
-        String[] columnNames = {
-                "functionName",
-                "result"
-        };
-    }
+
+
     // functional style
     static Function<Integer, Integer> incrementByOneFunction =
             number -> number + 1;
